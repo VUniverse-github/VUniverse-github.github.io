@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUniverse: Mysterious world</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
+</head>
+<body>
+    <audio id="clicksound">
+        <source src="clicksound.wav" type="audio/wav">
+    </audio>
+    <div class="bg"></div>
+    <div class="video-overlay">
+        <video id="intro-video" autoplay muted>
+            <source src="intro.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!-- Thanh điều hướng -->
+    <nav align="center" onclick="clicksound()">
+        <ul>
+            <li><a class="nav-link active" data-target="home">Home</a></li>
+            <!--<li><a class="nav-link active" data-target="home"><img src="home.png" height=45px></a></li>-->
+            <!--<li><a class="nav-link" data-target="updates"><img src="update.png" height=45px></a></li>-->
+            <li><a class="nav-link" data-target="updates">Update</a></li>
+            <!--<li><a class="nav-link" data-target="guide"><img src="game.png" height=45px></a></li>-->
+            
+            <!--<li><a class="nav-link" data-target="status" onclick="checkServerStatus()"><img src="status.png" height=45px></a></li>
+            <li><a class="nav-link" data-target="info"><img src="info.png" height=45px></a></li>-->
+            <li><a class="nav-link" data-target="info">info</a></li>
+            <li><a class="nav-link" data-target="status" onclick="checkServerStatus()">Status</a></li>
+            <li><a class="nav-link" data-target="guide">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="home" class="content-section active">
+            <div class="text">
+                <logo>
+                    <p align="center" style='font-size: 0.5px;'>
+                        <img src="logo.webp" width=100px style="border: 1px solid black;">
+                        <br>
+                        <img src="glxm.png" width=280px style="border-radius: 0px;">
+                        <br>
+                        <p align='center' style="font-size:5px">Website sponsor and creator.</p>
+                    </p>
+                    </logo>
+                <p>VUniverse: Mysterious world</p>
+                <p>
+                    VUniverse là máy chủ Minecraft top 1 VN, nơi bạn có thể khám phá những thế giới mới, tham gia vào các cuộc phiêu lưu kỳ thú và gặp gỡ bạn bè, với các tính năng độc đáo và trải nghiệm chơi mượt mà, VUniverse lựa chọn tốt hơn bao giờ hết.
+                </p><div align="center" onclick="clicksound()">
+                <a class="btn btn-primary mx-1 my-1" href="minecraft://?addExternalServer=GalaxyMines|mc.servermc.xyz:10141" title="Connect"><button>join</button></a></div>
+                
+                <!--<img src="logo.jpg" alt="GalaxyMines logo">-->
+            </div>
+        </section>
+
+
+        <section id="updates" class="content-section">
+            <div class="text">
+                <h1>Cập nhật</h1>
+                <ul>
+                    <li><strong>14/9/2024: </strong>Cập nhật tính năng Casino</li>
+                    <li>
+                        <strong>15/8/2024:</strong> Máy chủ đã nâng cấp các tính năng siêu việt!!
+                        <br>
+                    </li>
+                    <li>
+                        <strong>13/8/2024:</strong> Máy chủ đã có Giftcode!
+                        <br>
+                    </li>
+                    <li>
+                        <strong>13/8/2024:</strong> Máy chủ đã có các loại tiền tệ!
+                        <br>
+                    </li>
+                    <li>
+                        <strong>13/8/2024:</strong> Máy chủ đã có thanh năng lượng!
+                        <br>
+                    </li>
+                    <li>
+                        <strong>13/8/2024:</strong> Máy chủ đã có Guild!
+                        <br>
+                    </li>
+                    <li>
+                        <strong>13/8/2024:</strong> Máy chủ đã có Boss!
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section id="guide" class="content-section">
+            <div class="text">
+                <h1>Hướng dẫn Chơi</h1>
+                <ol>
+                    <li>IP máy chủ: <code>galaxymines.net</code><br> port: <code>19132(default)</code></li>
+                    <br>
+                    <li>Nhấn vào nút <code>Save - để lưu máy chủ</code> hoặc nút <code>Join - để lưu và vào máy chủ</code></li>
+                    <br>
+                    <li>Ví dụ:</li>
+                </ol>
+                <img src="howtojoin.jpg" alt="Hướng dẫn Chơi">
+            </div>
+        </section>
+        
+        <section id="status" class="content-section">
+            <div class="text">
+                <h2>Trạng thái của máy chủ</h2>
+                <ul>
+                    <div id="status-result">
+                    </div>
+                <div onclick="clicksound()">
+                    <button onclick="checkServerStatus()">Reload</button>
+                </div>
+                </ul>
+                <p><code>Copyright © Vasync</code></p>
+            </div>
+        </section>
+        
+        <section id="info" class="content-section">
+            <div class="text">
+                <h2>Thông tin nhân viên máy chủ:</h2>
+                <ul>
+                    <li>
+                        BaorzK | chức vụ Owner:
+                        <img src="owner.jpg" height=50px>
+                    </li>
+                    <br>
+                    <li>
+                        JJokl302 | chức vụ Admin:
+                        <img src="#" alt="không có ảnh">
+                    </li>
+                </ul>
+                <p><code>Copyright © Vasync</code></p>
+            </div>
+        </section>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
