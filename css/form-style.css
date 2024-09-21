@@ -1,0 +1,164 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+@import url('https://fonts.cdnfonts.com/css/minecraftia');
+
+body {
+    /*background: url("mc.avif");*/
+    background-color: dimgrey;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    margin: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    font-family: Arial, sans-serif;
+    color: white;
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 10px;
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0.7;
+    filter: brightness(250%);
+    transition: opacity 1s ease-out; /* Thêm hiệu ứng mờ dần */
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    display: none;
+}
+
+.show-content {
+    display: block;
+}
+.hidden {
+    opacity: 0; /* Làm video mờ dần */
+    pointer-events: none; /* Đảm bảo video không còn tương tác được sau khi mờ dần */
+}
+
+div .text {
+    /*background-image: url("form.jpg");*/
+    background-color: gray;
+    border-color: 2px solid gray;
+    padding: 20px;
+    margin: 30px;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+nav {
+    font-family: 'Minecraft', sans-serif;
+    /**background: url("click.png");**/
+    background-color: gray;
+    background-size: 110% 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    border: 0px solid black;
+}
+
+logo {
+
+}
+
+logo img {
+    border-radius: 15px;
+}
+
+button {
+    /*background: url("click.png");*/
+    background-color: gray;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 5px 15px;
+    background-size: 100% 100%;
+    font-family: 'Minecraft', sans-serif;
+}
+
+button:hover {
+    /*background: url("clicked.png");*/
+    background-color: dimgray;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 5px 15px;
+    background-size: 100% 100%;
+    font-family: 'Minecraft', sans-serif;
+}
+
+nav .logo {
+    color: #ecf0f1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: dimgray;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+}
+
+nav ul li a.active {
+    color: black;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+.content-section {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 0.8s ease-in-out, opacity 1.5s ease-in-out;
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.content-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
